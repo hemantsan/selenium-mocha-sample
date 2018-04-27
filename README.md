@@ -12,4 +12,17 @@ Mocha and Selenium both deal with testing software but they solve different prob
 
 ---
 
-If you want to write a test suite that tests a browser-based application you could use Mocha together with Selenium. Or Jasmine (another test running framework) with Selenium. Or you could use Behave (a Python based test runner) together with Selenium. Or you could use Mocha together with some other library that controls browsers
+If you want to write a test suite that tests a browser-based application you could use Mocha together with Selenium. Or Jasmine (another test running framework) with Selenium. Or you could use Behave (a Python based test runner) together with Selenium. Or you could use Mocha together with some other library that controls browsers.
+
+### setup
+
+`npm install`
+
+*   make sure you have add [chromedriver.exe](https://sites.google.com/a/chromium.org/chromedriver/downloads) (chrome) and [geckodriver.exe](https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-win64.zip) (firefox) in system's PATH variable.
+
+Run the test
+
+syntax : mocha path/to/test-folder/test-file.js  
+example:  
+&nbsp;&nbsp;&nbsp;for chrome : `mocha __test__/chrome.js`  
+&nbsp;&nbsp;&nbsp;for firefox : `mocha __test__/firefox.js`

@@ -22,7 +22,7 @@ If you want to write a test suite that tests a browser-based application you cou
 
 Run the test
 
-syntax : mocha path/to/test-folder/test-file.js  
+syntax : `npm test path/to/test-folder/test-file.js`  
 example:  
 &nbsp;&nbsp;&nbsp;for chrome : `npm test __test__/chrome-test.js`  
 &nbsp;&nbsp;&nbsp;for firefox : `npm test __test__/firefox-test.js`  

@@ -24,6 +24,6 @@ Run the test
 
 syntax : mocha path/to/test-folder/test-file.js  
 example:  
-&nbsp;&nbsp;&nbsp;for chrome : `npm test __test__/chrome.js`  
-&nbsp;&nbsp;&nbsp;for firefox : `npm test __test__/firefox.js`  
+&nbsp;&nbsp;&nbsp;for chrome : `npm test __test__/chrome-test.js`  
+&nbsp;&nbsp;&nbsp;for firefox : `npm test __test__/firefox-test.js`  
 &nbsp;&nbsp;&nbsp;mocha test : `npm test __test__/mocha-test.js`

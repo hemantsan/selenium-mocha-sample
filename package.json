@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "mocha"
+        "test": "mocha --timeout 30000"
     },
     "keywords": ["test", "unit-test-demo"],
     "author": "Hemant Sankhla",

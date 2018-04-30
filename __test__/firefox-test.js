@@ -1,12 +1,41 @@
 var webdriver = require('selenium-webdriver');
+var assert = require('assert');
 
-var driver = new webdriver.Builder().forBrowser('firefox').build();
+describe('Firefox Test', function() {
+    var driver;
 
-driver.get(
-    'https://blog.testproject.io/2017/06/07/javascript-testing-with-selenium-webdriver-mocha/'
-);
-driver.getTitle().then(function(title) {
-    console.log(title);
+    before(function() {
+        console.log('before START');
+
+        driver = new webdriver.Builder().forBrowser('firefox').build();
+
+        console.log('before END');
+    });
+
+    it('should load url', function(done) {
+        console.log('it START');
+
+        driver
+            .get(
+                'https://blog.testproject.io/2017/06/07/javascript-testing-with-selenium-webdriver-mocha/'
+            )
+            .then(() => done());
+
+        driver
+            .getTitle()
+            .then(function(title) {
+                console.log('\n' + title);
+            })
+            .then(() => done());
+
+        console.log('it END');
+    });
+
+    after(function() {
+        console.log('after START');
+
+        driver.quit();
+
+        console.log('after END');
+    });
 });
-
-driver.quit();

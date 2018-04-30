@@ -1,15 +1,13 @@
 var webdriver = require('selenium-webdriver');
 var assert = require('assert');
 
-describe('Google Search', function() {
+describe('Google Test', function() {
     var driver;
 
     before(function() {
         console.log('before START');
 
-        driver = new webdriver.Builder()
-            .withCapabilities(webdriver.Capabilities.chrome())
-            .build();
+        driver = new webdriver.Builder().forBrowser('chrome').build();
 
         console.log('before END');
     });
@@ -17,13 +15,18 @@ describe('Google Search', function() {
     it('should load url', function(done) {
         console.log('it START');
 
-        driver.get(
-            'https://blog.testproject.io/2017/06/07/javascript-testing-with-selenium-webdriver-mocha/'
-        );
+        driver
+            .get(
+                'https://blog.testproject.io/2017/06/07/javascript-testing-with-selenium-webdriver-mocha/'
+            )
+            .then(() => done());
 
-        driver.getTitle().then(function(title) {
-            console.log('\n' + title);
-        });
+        driver
+            .getTitle()
+            .then(function(title) {
+                console.log('\n' + title);
+            })
+            .then(() => done());
 
         console.log('it END');
     });
